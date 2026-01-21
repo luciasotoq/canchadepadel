@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cancha de Pádel</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background: #fff;
+    }
+
+    /* Título principal */
+    .project-title {
+      text-align: center;
+      padding: 40px 20px 20px;
+      font-size: 2.8rem;
+      font-weight: 300;
+      letter-spacing: 1px;
+      color: #222;
+    }
+
+    /* ================= CARRUSEL ================= */
+    .main-content {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 20px 40px;
+    }
+
+    .carousel-section {
+      width: 100%;
+    }
+
+    .carousel-container {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .carousel-slide {
+      min-width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: transparent;
+    }
+
+    .carousel-slide img {
+      max-width: 100%;
+      height: auto;
+      max-height: 85vh;
+      object-fit: contain;
+      display: block;
+    }
+
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.4);
+      color: white;
+      border: none;
+      font-size: 30px;
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      cursor: pointer;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .carousel-btn.left  { left: 25px; }
+    .carousel-btn.right { right: 25px; }
+
+    .carousel-nav {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin: 30px 0;
+      flex-wrap: wrap;
+    }
+
+    .carousel-nav img {
+      width: 85px;
+      height: 85px;
+      object-fit: cover;
+      cursor: pointer;
+      opacity: 0.75;
+      border-radius: 8px;
+      transition: all 0.25s;
+    }
+
+    .carousel-nav img.active,
+    .carousel-nav img:hover {
+      opacity: 1;
+      transform: scale(1.12);
+      border: 3px solid #111;
+    }
+
+    /* ================= VIDEO ================= */
+    .project-video {
+      max-width: 1400px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    .vimeo-wrapper {
+      position: relative;
+      padding-top: 56.25%; /* 16:9 */
+      background: #000;
+    }
+
+    .vimeo-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    @media (max-width: 768px) {
+      .project-title {
+        font-size: 2.2rem;
+        padding: 30px 15px 15px;
+      }
+      .carousel-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- TÍTULO -->
+  <h1 class="project-title">Cancha de Pádel</h1>
+
+  <!-- CARRUSEL -->
+  <div class="main-content">
+    <div class="carousel-section">
+      <div class="carousel-container">
+        <button class="carousel-btn left">&#10094;</button>
+
+        <ul class="carousel-track">
+          <li class="carousel-slide"><img src="images/CP1.webp" alt="Cancha de Pádel 1"></li>
+          <li class="carousel-slide"><img src="images/CP2.webp" alt="Cancha de Pádel 2"></li>
+          <li class="carousel-slide"><img src="images/CP3.webp" alt="Cancha de Pádel 3"></li>
+          <li class="carousel-slide"><img src="images/CP4.webp" alt="Cancha de Pádel 4"></li>
+          <li class="carousel-slide"><img src="images/CP5.webp" alt="Cancha de Pádel 5"></li>
+          <li class="carousel-slide"><img src="images/CP6.webp" alt="Cancha de Pádel 6"></li>
+          <li class="carousel-slide"><img src="images/CP7.webp" alt="Cancha de Pádel 7"></li>
+          <li class="carousel-slide"><img src="images/CP8.webp" alt="Cancha de Pádel 8"></li>
+        </ul>
+
+        <button class="carousel-btn right">&#10095;</button>
+      </div>
+
+      <div class="carousel-nav">
+        <img src="images/CP1.webp" data-index="0" alt="Miniatura 1">
+        <img src="images/CP2.webp" data-index="1" alt="Miniatura 2">
+        <img src="images/CP3.webp" data-index="2" alt="Miniatura 3">
+        <img src="images/CP4.webp" data-index="3" alt="Miniatura 4">
+        <img src="images/CP5.webp" data-index="4" alt="Miniatura 5">
+        <img src="images/CP6.webp" data-index="5" alt="Miniatura 6">
+        <img src="images/CP7.webp" data-index="6" alt="Miniatura 7">
+        <img src="images/CP8.webp" data-index="7" alt="Miniatura 8">
+      </div>
+    </div>
+  </div>
+
+<!-- VIDEO -->
+<section class="project-video">
+  <div class="vimeo-wrapper">
+    <iframe 
+      src="https://player.vimeo.com/video/1156761570?badge=0&autopause=0&player_id=0&app_id=58479"
+      frameborder="0"
+      allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+      title="Cancha de Pádel">
+    </iframe>
+  </div>
+</section>
+  <!-- JAVASCRIPT -->
+  <script>
+    const track = document.querySelector('.carousel-track');
+    const slides = Array.from(track.children);
+    const nextBtn = document.querySelector('.carousel-btn.right');
+    const prevBtn = document.querySelector('.carousel-btn.left');
+    const navImages = document.querySelectorAll('.carousel-nav img');
+
+    let currentIndex = 0;
+
+    function goToSlide(index) {
+      track.style.transform = `translateX(-${index * 100}%)`;
+      navImages.forEach(img => img.classList.remove('active'));
+      navImages[index].classList.add('active');
+    }
+
+    nextBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % slides.length;
+      goToSlide(currentIndex);
+    });
+
+    prevBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      goToSlide(currentIndex);
+    });
+
+    navImages.forEach((img, index) => {
+      img.addEventListener('click', () => {
+        currentIndex = index;
+        goToSlide(currentIndex);
+      });
+    });
+
+    goToSlide(0);
+  </script>
+
+</body>
+</html>
